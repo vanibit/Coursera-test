@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html >
+<link rel="stylesheet" href="styles/bootstrap.min.css">
+<script src="angular.min.js"></script>
+<script src="app.js"></script>
+<body>
+  <div ng-app="LunchCheck" ng-controller="LunchCheckController">
+        <h1>Lunch Checker</h1>
+           <div class="form-group">
+                <div  class="alert alert-info"> {{ErrorMsg}}</div>
+               <input id="lunch-menu" type="text" ng-model="lunchItems" placeholder="list comma separated dishes you usually have for lunch" class="form-control" required>
+           </div>
+            <br>
+           <div class="form-group">
+               <button class="btn btn-default" ng-click="countOf(lunchItems)">Check If Too Much</button>
+           </div>
+            <br>
+           <div class="form-group message">
+            {{Status}}
+           </div>
+  </div>
+</body>
+</html>
